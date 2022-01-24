@@ -25,6 +25,6 @@ deploy:
   skip-cleanup: true
   keep-history: true
   api_key: 98e86055-ecb7-46b4-8b6f-39a95fc55e5b
-  app: platzi-store-backend-personal
+  app: platzi-store-personal
   on:
     repo: fabiogomez/platzi-store-backend
