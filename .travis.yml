@@ -1,25 +1,29 @@
 language: node_js
+
 cache:
   directories:
     - node_module
     - ~/.npm
+
 node_js:
   - '12'
 git:
   depth: 3
 script:
   - yarn test
+
 notifications:
-  slack: https://www.udemy.com/course/aws-lambda-serverless/
+  slack: personalproje-dvy7545:WOsknQJ7mr8wW9RuPPw9gBke
   email:
     recipiens:
       - fabiogomez28@gmail.com
     on_success: always
     on_failure: always
+
 deploy:
   provide: heroku
-  skip_cleanup: true
-  keep_history: true
+  skip-cleanup: true
+  keep-history: true
   api_key: 98e86055-ecb7-46b4-8b6f-39a95fc55e5b
   app: platzi-store-backend-personal
   on:
