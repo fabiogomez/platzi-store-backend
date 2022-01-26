@@ -13,12 +13,13 @@ script:
   - yarn test
 
 notifications:
-  slack: personalproje-dvy7545:WOsknQJ7mr8wW9RuPPw9gBke
+  slack: "foOhBk5itK5WVtcb1NNyGSzBnh/jKZkr6qFq6UYtmyOznUl8tGTaimAiKROjXmKyaR3dfnCKXi6LekYlg6FJCjX4RAnq4r2YDhmx7YKAQ3JS4UKdyzkzo8R9J58LNYSCYizkAtpHNCiwCso0WRUUDJoWmKPI/7SJmelxdhoHV+QVrs8KiaYse+PDLDgpxaKJkXWeZyQKHsJ72uRo4kbMmIuZ+92h2KHmWy/ujeZF68Zi1Ehsm4umtR7z8g4lEdlcXhGj8ae8nZbkLvcTZwtMJWXR0Dg3BYuMDxDyC93372m2YPc0Oqqrpa2qSZlL461Zs5i/ce9IVlMyOhLaL23GbkNxu5znOgjcRamuEgHtgK0thixSNaMMeMZQT/O21mm88xUi7PZ/xd+y6uTWanllwd9zFyIyPiBCY+STMDF45RNWfMQf6F6B/TlSwz4mciWPmgoyXU0+1uuSyfhkPdrJiMxNxT+xE6O3kO/NiAFyVFqljliWAcQDPDzVZjPZRxYFSHNuiAw4ge+mft0zPDS38b1z3SeTfAe2dAlfbebfItvbS7x6OZs6uAUZBNNFreVpjBt4CF3BOfAKqkGfY09Jvy0D94Lm6xHS+BLWMO0qwGH6Nx+7DKmt1LsPht2xZlde8CbwmToq1zTeku6Uvy3mNPm8HlRaUvlQXSvUX4Z7JAA="
   email:
     recipiens:
       - fabiogomez28@gmail.com
     on_success: always
     on_failure: always
+    
 before_deploy:
   - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.8.0
 
@@ -26,7 +27,7 @@ deploy:
   provide: heroku
   skip-cleanup: true
   keep-history: true
-  api_key: 98e86055-ecb7-46b4-8b6f-39a95fc55e5b
+  api_key: "GLPk/V2vT119N57EoLJfWyQ8z9wwhcYa1jTnaJ6OanecpVrMcB7BEqNLTUEnwnbwKvLzfnSolMucGcPN/wMxpJ2PiVLcVRvo5MKYnPuZr6oU/c9lt5xQHEnFgyOfs63iUBd6eqcg850lwYYKoejLlakJBllRIWg/rmqM8JJjx/j+hk2Cc+Lwo2CA8SM/Zcb03Bj951b1zOWiAdD23WKzQ4L/VlcyDCetxp6FhCn+YQQVu1FYfdAiih0rseTd4uN5OCtjaVQPaiyjfettOsNYLvKl9Dynr/uZjW6Psg2scQXW0TgX9evm/Qf8Hiv9v2GMTF9SUzhYULjzoGreSBfBU1BpDZoy3k7pVm/wg38HUWRhXTvREcUpIciBgPFmfnf3g+FjEq7/n+i/TsL7KHrLLGmAlaSWM6SR86sNdaBsLRk/cmsb/fgJKCCAAgDB1h4xIVoKbtd4HBVgtWBElJ4oUiikATQ5khp8mGlwCvWvbhJjTFIRtDlqPQAbgyeO07jGUT1D4lh/IB4utxHifZpJFNlrQDri/1CcmqXDUm7x8Q1oopZEiUFJVlGLDjgRRIZ/mtavNRv3se2WZFjQgHkFlW14cTFSjUh3orl9WcEQYxxgi72/5ERPMImv5mHQJ4vU5GJtdt55oFztB9bYevODbxZwgu2+FnAFoKJ0E5j8BIo="
   app: platzi-store-personal
   on:
     repo: fabiogomez/platzi-store-backend
